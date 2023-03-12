@@ -19,7 +19,7 @@ local function isSourceAllowed(source, permissions)
         end
     end
 
-    if permissions.aceGroups then
+    if permissions.acePermissions then
         for _, aceGroup in pairs(permissions.acePermissions) do
             if IsPlayerAceAllowed(source, aceGroup) then
                 hasPermission = true
