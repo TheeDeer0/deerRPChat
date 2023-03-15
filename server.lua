@@ -10,6 +10,8 @@ end)
 
 local function isSourceAllowed(source, permissions)
     local hasPermission = false
+    if permissions == false then return true end
+    
     if permissions.identifiers then
         local identifiers = GetPlayerIdentifiers(source)
         for _, identifier in pairs(permissions.identifiers) do
@@ -19,9 +21,9 @@ local function isSourceAllowed(source, permissions)
         end
     end
 
-    if permissions.acePermissions then
+    if permissions.aceGroups then
         for _, aceGroup in pairs(permissions.acePermissions) do
-            if IsPlayerAceAllowed(source, acePermissions) then
+            if IsPlayerAceAllowed(source, aceGroup) then
                 hasPermission = true
             end
         end
