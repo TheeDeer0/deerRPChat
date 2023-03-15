@@ -53,7 +53,7 @@ config = {
             color = {r = 128, g = 128, b = 128},
             sendToAll = false,
             permissions = {
-                acePermissions = "staff",
+                acePermissions = {"staff"},
             },
             proximity = false,
             nameFormatting = {
@@ -80,8 +80,8 @@ config = {
             color = {r = 128, g = 128, b = 128},
             sendToAll = false,
             permissions = {
-                job = "police",
-                jobType = "leo"
+                jobs = {"police"},
+                jobTypes = {"leo"}
             },
             proximity = false,
             nameFormatting = {
